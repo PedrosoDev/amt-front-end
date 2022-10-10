@@ -1,10 +1,8 @@
 import Logo from "../Logo";
 import {
   Container,
-  Item,
   ItemsContainer,
-  LogoContainer,
-  Title,
+  LogoContainer
 } from "./styles";
 
 export default function () {
@@ -12,18 +10,18 @@ export default function () {
     <Container>
       <LogoContainer>
         <Logo />
-        <Title>
+        <h1>
           Associação de Moradores <br /> do Taboleiro
-        </Title>
+        </h1>
       </LogoContainer>
       <ItemsContainer>
-        <Item href="#" isActive={true}>
+        <a href="#" className="active">
           Início
-        </Item>
-        <Item href="#">História</Item>
-        <Item href="#">Associação</Item>
-        <Item href="#">Documentos</Item>
-        <Item href="#">Contato</Item>
+        </a>
+        <a href="#">História</a>
+        <a href="#">Associação</a>
+        <a href="#">Documentos</a>
+        <a href="#">Contato</a>
       </ItemsContainer>
     </Container>
   );

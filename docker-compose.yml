@@ -13,6 +13,6 @@ services:
     working_dir: /var/front
     command: sh -c "npm install && npm run dev"
     ports:
-      - 8080:1234
+      - 8080:5173
     volumes:
       - .:/var/front

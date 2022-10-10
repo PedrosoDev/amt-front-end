@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  margin: 0 109px;
+  .swiper {
+    margin: 0 109px;
+  }
 `;
 
 export const SectionContainer = styled.section`
@@ -12,20 +14,21 @@ export const SectionContainer = styled.section`
 
     height: fit-content;
     width: fit-content;
+    margin: auto;
+    max-width: calc(100% - 218px);
     margin-top: 54px;
-    margin: 0 auto;
     padding: 32px 16px;
-`;
 
-export const Title = styled.h1`
-    grid-column: 1 / 4 ;
-    font-size: 40px;
-    font-weight: 400;
-    text-align: center;
+    h1 {
+        grid-column: 1 / 4 ;
+        font-size: 40px;
+        font-weight: 400;
+        text-align: center;
 
-    margin-bottom: 16px;
+        margin-bottom: 16px;
 
-    color: ${props => props.theme.colors.text};
+        color: ${props => props.theme.colors.text};
+    }
 `;
 
 export const NoticeContainer = styled.div`
@@ -36,35 +39,34 @@ export const NoticeContainer = styled.div`
 
     height: 100%;
     width: 100%;
-    padding: 16px;
-    border-radius: 20px;
+    padding: 12px;
+    border-radius: 10px;
 
     background: ${props => props.theme.colors.background};
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-`;
-
-export const NoticeImage = styled.img`
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-`;
-
-export const NoticeDate = styled.span`
-    font-size: 12px;
-    font-weight: 500;
-    margin: 8px 0;
-
-    color: ${props => props.theme.colors.secondary};
-`;
-
-export const NoticeTitle = styled.h2`
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
     
-    margin: 0;
-    color: ${props => props.theme.colors.text};
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    span {
+        font-size: 12px;
+        font-weight: 500;
+        margin: 8px 0;
+
+        color: ${props => props.theme.colors.secondary};
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        
+        color: ${props => props.theme.colors.text};
+    }
 `;
 
 export const AssociateContainer = styled.div`
@@ -72,24 +74,38 @@ export const AssociateContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-self: center;
-`;
 
-export const AssociateImage = styled.img`
-    height: 10vw;
-    width: 10vw;
-    border-radius: 50%;
+    img {
+        height: 10vw;
+        width: 10vw;
+        border-radius: 50%;
 
-    object-fit: cover;
-`;
+        object-fit: cover;
+    }
 
-export const AssociateTitle = styled.h2`
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-    
-    margin: 0;
-    color: ${props => props.theme.colors.text};
+    h1 {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        
+        color: ${props => props.theme.colors.text};
+    }
 `;
 
 export const NewsLetterContainer = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+
+    background: ${props => props.theme.colors.primary};
+
+    h1 {
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
 `;

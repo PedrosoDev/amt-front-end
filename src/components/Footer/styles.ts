@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
   display: flex;
@@ -12,6 +12,14 @@ export const FooterContainer = styled.footer`
   width: 100%;
 
   background: ${(props) => props.theme.colors.darkBackground};
+
+  span {
+    font-size: 14px;
+    text-align: center;
+
+    color: ${(props) => props.theme.colors.lightText};
+    opacity: 0.6;
+  }
 `;
 
 export const SectionContainer = styled.section`
@@ -26,46 +34,33 @@ export const SectionContainer = styled.section`
 export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
-`;
 
-export const TitleItem = styled.h1`
-  font-size: 24px;
-  font-weight: 700;
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
 
-  padding-bottom: 8px;
-  margin: 0;
-  
-  border-bottom: 2px solid white;
-  color: ${(props) => props.theme.colors.lightText};
-`;
-
-const baseCSS = css`
-  margin-top: 16px;
-  font-size: 16px;
-
-  color: ${props => props.theme.colors.lightText};
-`;
-
-export const TextItem = styled.span`
-    ${baseCSS}
-`;
-
-export const AnchorItem = styled.a`
-  ${baseCSS}
-
-  text-decoration: none;
-  
-  transition: 0.2s;
-
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    padding-bottom: 8px;
+    margin: 0;
+    
+    border-bottom: 2px solid white;
+    color: ${(props) => props.theme.colors.lightText};
   }
-`;
 
-export const CopyrightText = styled.p`
-  font-size: 14px;
-  text-align: center;
+  a, span {
+    margin-top: 16px;
+    font-size: 16px;
+    text-align: left;
 
-  color: ${(props) => props.theme.colors.lightText};
-  opacity: 0.6;
+    color: ${props => props.theme.colors.lightText};  
+  }
+
+  a {
+    text-decoration: none;
+  
+    transition: 0.2s;
+
+    &:hover {
+      color: ${(props) => props.theme.colors.primary};
+    }
+  }
 `;

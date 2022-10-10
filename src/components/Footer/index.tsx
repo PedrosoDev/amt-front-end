@@ -1,11 +1,7 @@
 import {
   FooterContainer,
-  CopyrightText,
   SectionContainer,
   ItemContainer,
-  TitleItem,
-  AnchorItem,
-  TextItem,
 } from "./styles";
 
 export default function () {
@@ -13,34 +9,34 @@ export default function () {
     <FooterContainer>
       <SectionContainer>
         <ItemContainer>
-          <TitleItem>Mapa do Site</TitleItem>
+          <h1>Mapa do Site</h1>
 
-          <AnchorItem href="/inicio">Início</AnchorItem>
-          <AnchorItem href="#">História</AnchorItem>
+          <a href="/inicio">Início</a>
+          <a href="#">História</a>
         </ItemContainer>
 
         <ItemContainer>
-          <TitleItem>Onde Estamos</TitleItem>
+          <h1>Onde Estamos</h1>
 
-          <TextItem>Rua São João, 4265, Quadra 6, São José</TextItem>
-          <TextItem>Balneário Camboriú - SC</TextItem>
-          <TextItem>CEP 88380-000</TextItem>
+          <span>Rua São João, 4265, Quadra 6, São José</span>
+          <span>Balneário Camboriú - SC</span>
+          <span>CEP 88380-000</span>
         </ItemContainer>
 
         <ItemContainer>
-          <TitleItem>Conecte-se Conosco</TitleItem>
+          <h1>Conecte-se Conosco</h1>
 
-          <TextItem>(48) 98594-9250</TextItem>
-          <TextItem>thuhang.nute@gmail.com</TextItem>
-          <TextItem>Icones Redes Sociais</TextItem>
+          <span>(48) 98594-9250</span>
+          <span>thuhang.nute@gmail.com</span>
+          <span>Icones Redes Sociais</span>
         </ItemContainer>
       </SectionContainer>
-      <CopyrightText>
+      <span>
         Associação de Moradores do Taboleiro ©{" "}
         {new Date(Date.now()).getFullYear()} - Todos os Direitos Reservados |
-        Criado por LabMat(i)² | Powered by Instituto Federal Catarinense -
-        Campus Camboriú
-      </CopyrightText>
+        Criado por LabMat(i)², Powered by Instituto Federal Catarinense - Campus
+        Camboriú
+      </span>
     </FooterContainer>
   );
 }
